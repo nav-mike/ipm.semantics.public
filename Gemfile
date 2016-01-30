@@ -32,6 +32,22 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# auth
+gem 'devise'
+gem 'cancancan', '~> 1.10'
+gem 'rolify'
+
+# frontend
+gem 'bootstrap-sass'
+gem 'font-awesome-rails'
+gem 'slim-rails'
+gem 'simple_form'
+gem 'bootstrap-generators', group: :development
+
+# grid view
+gem 'wice_grid', '3.6.0.pre4'
+gem 'font-awesome-sass', '~> 4.3'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
