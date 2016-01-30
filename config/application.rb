@@ -26,7 +26,6 @@ module SemanticCmsDemo
 
     # Config gem
     Bundler.require(*Rails.groups)
-    Config::Integration::Rails::Railtie.preload
 
     config.generators do |g|
       g.orm :active_record

@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @page.name
+p
+  strong Path:
+  = @page.path
+p
+  strong Title:
+  = @page.title
+p
+  strong Html:
+  = @page.html
+
+= link_to 'Edit', edit_page_path(@page)
+'|
+= link_to 'Back', pages_path
