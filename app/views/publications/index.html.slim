@@ -1,0 +1,19 @@
+h1 Listing publications
+
+table
+  thead
+    tr
+      th
+      th
+      th
+
+  tbody
+    - @publications.each do |publication|
+      tr
+        td = link_to 'Show', publication
+        td = link_to 'Edit', edit_publication_path(publication)
+        td = link_to 'Destroy', publication, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Publication', new_publication_path
