@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160130143119) do
+ActiveRecord::Schema.define(version: 20160130144220) do
 
   create_table "pages", force: :cascade do |t|
     t.string   "name",       null: false
@@ -23,6 +23,33 @@ ActiveRecord::Schema.define(version: 20160130143119) do
   end
 
   add_index "pages", ["name"], name: "index_pages_on_name"
+
+  create_table "people", force: :cascade do |t|
+    t.string   "linkedin"
+    t.string   "google_plus"
+    t.string   "scopus"
+    t.string   "university",     null: false
+    t.string   "awards"
+    t.string   "impact_story"
+    t.string   "google_scholar"
+    t.string   "cv"
+    t.string   "orcid"
+    t.string   "name",           null: false
+    t.text     "biography"
+    t.string   "email"
+    t.string   "room"
+    t.string   "laboratory"
+    t.string   "website"
+    t.string   "github"
+    t.string   "education"
+    t.string   "twitter"
+    t.string   "photo"
+    t.string   "fb"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "people", ["name"], name: "index_people_on_name"
 
   create_table "projects", force: :cascade do |t|
     t.string   "github"

@@ -1,0 +1,59 @@
+h1 Listing people
+
+table
+  thead
+    tr
+      th Linkedin
+      th Google plus
+      th Scopus
+      th University
+      th Awards
+      th Impact story
+      th Google scholar
+      th Cv
+      th Orcid
+      th Name
+      th Biography
+      th Email
+      th Room
+      th Laboratory
+      th Website
+      th Github
+      th Education
+      th Twitter
+      th Photo
+      th Fb
+      th
+      th
+      th
+
+  tbody
+    - @people.each do |person|
+      tr
+        td = person.linkedin
+        td = person.google_plus
+        td = person.scopus
+        td = person.university
+        td = person.awards
+        td = person.impact_story
+        td = person.google_scholar
+        td = person.cv
+        td = person.orcid
+        td = person.name
+        td = person.biography
+        td = person.email
+        td = person.room
+        td = person.laboratory
+        td = person.website
+        td = person.github
+        td = person.education
+        td = person.twitter
+        td = person.photo
+        td = person.fb
+        td = link_to 'Show', person
+        td = link_to 'Edit', edit_person_path(person)
+        td = link_to 'Destroy', person, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Person', new_person_path
