@@ -1,0 +1,18 @@
+= simple_form_for(@project) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :github
+    = f.input :twitter
+    = f.input :keywords
+    = f.input :status
+    = f.input :title
+    = f.input :name
+    = f.input :logo
+    = f.input :start_date
+    = f.input :end_date
+    = f.input :description
+    = f.input :link
+
+  .form-actions
+    = f.button :submit

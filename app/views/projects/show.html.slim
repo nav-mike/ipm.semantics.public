@@ -1,0 +1,39 @@
+p#notice = notice
+
+p
+  strong Github:
+  = @project.github
+p
+  strong Twitter:
+  = @project.twitter
+p
+  strong Keywords:
+  = @project.keywords
+p
+  strong Status:
+  = @project.status
+p
+  strong Title:
+  = @project.title
+p
+  strong Name:
+  = @project.name
+p
+  strong Logo:
+  = @project.logo
+p
+  strong Start date:
+  = @project.start_date
+p
+  strong End date:
+  = @project.end_date
+p
+  strong Description:
+  = @project.description
+p
+  strong Link:
+  = @project.link
+
+= link_to 'Edit', edit_project_path(@project)
+'|
+= link_to 'Back', projects_path

@@ -1,0 +1,41 @@
+h1 Listing projects
+
+table
+  thead
+    tr
+      th Github
+      th Twitter
+      th Keywords
+      th Status
+      th Title
+      th Name
+      th Logo
+      th Start date
+      th End date
+      th Description
+      th Link
+      th
+      th
+      th
+
+  tbody
+    - @projects.each do |project|
+      tr
+        td = project.github
+        td = project.twitter
+        td = project.keywords
+        td = project.status
+        td = project.title
+        td = project.name
+        td = project.logo
+        td = project.start_date
+        td = project.end_date
+        td = project.description
+        td = project.link
+        td = link_to 'Show', project
+        td = link_to 'Edit', edit_project_path(project)
+        td = link_to 'Destroy', project, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Project', new_project_path
