@@ -1,0 +1,86 @@
+doctype html
+html
+  head
+    meta charset='utf-8'
+    meta http-equiv='X-UA-Compatible' content='IE=edge'
+    meta name='viewport' content='width=device-width, initial-scale=1'
+
+    title state-title='Semantic CMS Admin pages' pattern='%s | Semantic CMS Admin pages'
+
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+
+  body
+
+    /! Header
+    .navbar.navbar-inverse.navbar-static-top#top-nav
+      .container
+        .navbar-header
+          button.navbar-toggle type='button' data-toggle='collapse' data-target='.navbar-collapse'
+            span.icon-toggle
+          a.navbar-brand href='/admin' Admin panel
+        .navbar-collapse.collapse
+          ul.nav.navbar-nav.navbar-right
+            li.dropdown
+              a.dropdown-toggle role='button' data-toggle='dropdown' href='#'
+                i.glyphicon.glyphicon-user
+                  |  Admin
+                  span.caret
+              ul.dropdown-menu#g-account-menu role='menu'
+                li
+                  a href='#' My profile
+                li
+                  a href='#' method='delete'
+                    i.fa.fa-lock.fa-fw
+                    |  Logout
+    /! /Header                
+    /! Main
+    .container
+       /! upper section
+       .row
+         .col-sm-2
+           h3
+             i.fa.fa-briefcase.fa-fw
+             |  Toolbox
+           hr
+
+           ul.nav.nav-stacked
+            li
+              a href='/!admin/department/settings'
+                i.fa.fa-gears.fa-fw
+                |  Department info
+            li
+              a href='/!admin/projects'
+                i.fa.fa-file-code-o.fa-fw
+                |  Projects
+            li
+              a href='/!admin/staff'
+                i.fa.fa-street-view.fa-fw
+                |  Staff
+            li
+              a href='/!admin/students'
+                i.fa.fa-graduation-cap.fa-fw
+                |  Students
+            li
+              a href='/!admin/publications'
+                i.fa.fa-book.fa-fw
+                |  Publications
+            li
+              a href='/!admin/pages'
+                i.fa.fa-file-o.fa-fw
+                |  Pages
+            li
+              a href='/!admin/users'
+                i.fa.fa-users.fa-fw
+                |  Users
+           hr
+
+         .col-sm-10
+          == yield
+
+  footer.text-center
+    | This Bootstrap 3 dashboard layout is compliments of
+    a href='http://www.bootply.com/85850'
+      strong  Bootply.com
+
