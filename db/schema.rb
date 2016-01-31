@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160130144716) do
+ActiveRecord::Schema.define(version: 20160131171628) do
 
   create_table "pages", force: :cascade do |t|
     t.string   "name",       null: false
@@ -51,6 +51,20 @@ ActiveRecord::Schema.define(version: 20160130144716) do
 
   add_index "people", ["name"], name: "index_people_on_name"
 
+  create_table "people_projects", id: false, force: :cascade do |t|
+    t.integer "person_id"
+    t.integer "project_id"
+  end
+
+  add_index "people_projects", ["person_id", "project_id"], name: "index_people_projects_on_person_id_and_project_id"
+
+  create_table "people_publications", id: false, force: :cascade do |t|
+    t.integer "person_id"
+    t.integer "publication_id"
+  end
+
+  add_index "people_publications", ["person_id", "publication_id"], name: "index_people_publications_on_person_id_and_publication_id"
+
   create_table "projects", force: :cascade do |t|
     t.string   "github"
     t.string   "twitter"
@@ -65,6 +79,11 @@ ActiveRecord::Schema.define(version: 20160130144716) do
     t.string   "link"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "projects_publications", id: false, force: :cascade do |t|
+    t.integer "project_id"
+    t.integer "publication_id"
   end
 
   create_table "publications", force: :cascade do |t|
