@@ -9,6 +9,7 @@ table.table.table-bordered.table-hover.table-stripped
       th Html
       th
       th
+      th
 
   tbody
     - @pages.each do |page|
@@ -16,7 +17,9 @@ table.table.table-bordered.table-hover.table-stripped
         td = page.name
         td = page.path
         td = page.title
-        td = page.html
+        td
+          span title='#{page.html}'
+            = page.html.gsub(/(.{40}).+/, '\1...')
         td = link_to 'Show', page, class: 'btn btn-default'
         td = link_to 'Edit', edit_page_path(page), class: 'btn btn-warning'
         td = link_to 'Destroy', page, data: {:confirm => 'Are you sure?'}, :method => :delete, class: 'btn btn-danger'
