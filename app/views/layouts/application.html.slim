@@ -19,7 +19,7 @@ html
         .navbar-header
           button.navbar-toggle type='button' data-toggle='collapse' data-target='.navbar-collapse'
             span.icon-toggle
-          a.navbar-brand href='/admin' Admin panel
+          a.navbar-brand href='/admin/pages' Admin panel
         .navbar-collapse.collapse
           ul.nav.navbar-nav.navbar-right
             li.dropdown
@@ -29,9 +29,9 @@ html
                   span.caret
               ul.dropdown-menu#g-account-menu role='menu'
                 li
-                  a href='#' My profile
+                  a href="/admin/users/#{current_user.id}" My profile
                 li
-                  a href='#' method='delete'
+                  a href='#{destroy_user_session_path}' method='delete'
                     i.fa.fa-lock.fa-fw
                     |  Logout
     /! /Header                
@@ -47,31 +47,23 @@ html
 
            ul.nav.nav-stacked
             li
-              a href='/!admin/department/settings'
-                i.fa.fa-gears.fa-fw
-                |  Department info
+              a href='/admin/people'
+                i.fa.fa-graduation-cap.fa-fw
+                |  People
             li
-              a href='/!admin/projects'
+              a href='/admin/projects'
                 i.fa.fa-file-code-o.fa-fw
                 |  Projects
             li
-              a href='/!admin/staff'
-                i.fa.fa-street-view.fa-fw
-                |  Staff
-            li
-              a href='/!admin/students'
-                i.fa.fa-graduation-cap.fa-fw
-                |  Students
-            li
-              a href='/!admin/publications'
+              a href='/admin/publications'
                 i.fa.fa-book.fa-fw
                 |  Publications
             li
-              a href='/!admin/pages'
+              a href='/admin/pages'
                 i.fa.fa-file-o.fa-fw
                 |  Pages
             li
-              a href='/!admin/users'
+              a href='/admin/users'
                 i.fa.fa-users.fa-fw
                 |  Users
            hr
