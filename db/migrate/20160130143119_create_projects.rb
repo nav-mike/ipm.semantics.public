@@ -9,7 +9,7 @@ class CreateProjects < ActiveRecord::Migration
       t.string :name, null: true, default: nil
       t.string :logo, null: true, default: nil
       t.date :start_date
-      t.string :end_date
+      t.date :end_date
       t.text :description
       t.string :link, null: true, default: nil
 

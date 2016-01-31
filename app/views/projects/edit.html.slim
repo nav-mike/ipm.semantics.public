@@ -1,8 +1,11 @@
 h1 Editing project
 
-== render 'form'
+p
+  == render 'form'
 
-= link_to 'Show', @project
-'|
-= link_to 'Back', projects_path
+.row
+  .col-sm-1
+    = link_to 'Show', @project, class: 'btn btn-default'
+  .col-sm-11
+    = link_to 'Back', projects_path, class: 'btn btn-warning'
 
