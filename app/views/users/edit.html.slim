@@ -1,0 +1,10 @@
+h1 Editing page
+
+p
+  == render 'form'
+
+.row
+  .col-sm-1
+    = link_to 'Show', @user, class: 'btn btn-default'
+  .col-sm-11
+    = link_to 'Back', users_path, class: 'btn btn-warning'
