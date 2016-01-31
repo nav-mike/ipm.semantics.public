@@ -24,3 +24,7 @@ admin.add_role :admin
                   description: Faker::Lorem.paragraphs.first,
                   link: Faker::Internet.url
 end
+
+17.times do
+  Publication.create! bib: "#{Faker::Name.name}, #{Faker::Name.name}, #{Faker::Name.name} #{Faker::Lorem.sentence} // #{Faker::Lorem.sentence(2)} #{[*1991..2016].sample}. V. #{Faker::Number.number(2)}. N #{Faker::Number.number(1)}."
+end
