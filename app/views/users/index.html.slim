@@ -13,7 +13,6 @@ table.table.table-bordered.table-hover.table-stripped
       tr
         td = user.email
         td = user.roles.pluck(:name)
-        td = link_to 'Show', user, class: 'btn btn-default'
         td = link_to 'Edit', edit_user_path(user), class: 'btn btn-warning'
         td = link_to 'Destroy', user, data: {confirm: 'Are you sure?'}, method: :delete, class: 'btn btn-danger'
 

@@ -18,7 +18,6 @@ table.table.table-bordered.table-hover.table-stripped
         td = project.name
         td = project.start_date
         td = project.end_date
-        td = link_to 'Show', project, class: 'btn btn-default'
         td = link_to 'Edit', edit_project_path(project), class: 'btn btn-warning'
         td = link_to 'Destroy', project, data: {:confirm => 'Are you sure?'}, :method => :delete, class: 'btn btn-danger'
 

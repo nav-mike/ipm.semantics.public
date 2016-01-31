@@ -14,7 +14,6 @@ table.table.table-bordered.table-hover.table-stripped
       tr
         td = person.name
         td = person.email
-        td = link_to 'Show', person, class: 'btn btn-default'
         td = link_to 'Edit', edit_person_path(person), class: 'btn btn-warning'
         td = link_to 'Destroy', person, data: {:confirm => 'Are you sure?'}, :method => :delete, class: 'btn btn-danger'
 
