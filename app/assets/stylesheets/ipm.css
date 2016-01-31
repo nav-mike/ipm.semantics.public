@@ -1,0 +1,48 @@
+/*
+  Theme Name: ipm
+*/
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 20px;
+}
+
+#header {
+  min-height: 20px;
+  width: 100%;
+  background-color: #113E69;
+  color: #FFF;
+  text-align: center;
+  font-family: "Myriad Pro", Georgia, "Times New Roman", Times, serif;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+}
+
+#header a {
+  color: #FFF;
+  text-align: center;
+  font-family: "Myranid Pro", Georgia, "Times New Roman", Times, serif;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  font-family: "Myranid Pro", Georgia, "Times New Roman", Times, serif;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  color: #FFF;
+  background-color: #113E69;
+  padding-top: 10px;
+}

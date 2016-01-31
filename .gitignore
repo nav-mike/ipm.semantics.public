@@ -52,3 +52,5 @@ bower.json
 .powenv
 
 *.swp
+
+.byebug_history

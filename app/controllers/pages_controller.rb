@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_action :set_page, only: [:show, :edit, :update, :destroy]
+  before_action :set_page, only: [:edit, :update, :destroy]
 
   # GET /pages
   # GET /pages.json
@@ -7,9 +7,11 @@ class PagesController < ApplicationController
     @pages = Page.all
   end
 
-  # GET /pages/1
-  # GET /pages/1.json
   def show
+    @page = Page.find_by(path: "/#{params[:path]}")
+    @page ||= Page.find_by(name: 'index')
+
+    render layout: 'public'
   end
 
   # GET /pages/new
