@@ -1,15 +1,10 @@
 class PublicationsController < ApplicationController
-  before_action :set_publication, only: [:show, :edit, :update, :destroy]
+  before_action :set_publication, only: [:edit, :update, :destroy]
 
   # GET /publications
   # GET /publications.json
   def index
     @publications = Publication.all
-  end
-
-  # GET /publications/1
-  # GET /publications/1.json
-  def show
   end
 
   # GET /publications/new
