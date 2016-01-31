@@ -31,7 +31,8 @@ html
                 li
                   a href="/admin/users/#{current_user.id}" My profile
                 li
-                  a href='#{destroy_user_session_path}' method='delete'
+                  /a href='#{destroy_user_session_path}' method='delete'
+                  = link_to destroy_user_session_path, method: :delete do
                     i.fa.fa-lock.fa-fw
                     |  Logout
     /! /Header                

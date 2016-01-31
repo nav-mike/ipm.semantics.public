@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery_ujs
 //= require bootstrap-sprockets
 //= require wice_grid
 //= require_tree .

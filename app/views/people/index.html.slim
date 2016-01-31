@@ -3,15 +3,17 @@ h1 Listing people
 table.table.table-bordered.table-hover.table-stripped
   thead
     tr
+      th
       th Name
       th Email
-      th
       th
       th
 
   tbody
     - @people.each do |person|
       tr
+        td
+          img src="#{person.photo}" style='float: left; margin-right: 20px; margin-bottom: 10px;' height='100px'
         td = person.name
         td = person.email
         td = link_to 'Edit', edit_person_path(person), class: 'btn btn-warning'
