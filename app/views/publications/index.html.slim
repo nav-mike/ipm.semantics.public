@@ -1,8 +1,9 @@
 h1 Listing publications
 
-table
+table.table.table-bordered.table-hover.table-stripped
   thead
     tr
+      th
       th
       th
       th
@@ -10,10 +11,11 @@ table
   tbody
     - @publications.each do |publication|
       tr
-        td = link_to 'Show', publication
-        td = link_to 'Edit', edit_publication_path(publication)
-        td = link_to 'Destroy', publication, data: {:confirm => 'Are you sure?'}, :method => :delete
+        td = publication.bib
+        td = link_to 'Show', publication, class: 'btn btn-default'
+        td = link_to 'Edit', edit_publication_path(publication), class: 'btn btn-warning'
+        td = link_to 'Destroy', publication, data: {:confirm => 'Are you sure?'}, :method => :delete, class: 'btn btn-danger'
 
 br
 
-= link_to 'New Publication', new_publication_path
+= link_to 'New Publication', new_publication_path, class: 'btn btn-primary'

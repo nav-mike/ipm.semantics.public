@@ -1,8 +1,11 @@
 h1 Editing publication
 
-== render 'form'
+p
+  == render 'form'
 
-= link_to 'Show', @publication
-'|
-= link_to 'Back', publications_path
+.row
+  .col-sm-1
+    = link_to 'Show', @publication, class: 'btn btn-default'
+  .col-sm-11
+    = link_to 'Back', publications_path, class: 'btn btn-warning'
 
