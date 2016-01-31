@@ -1,6 +1,6 @@
 h1 Listing pages
 
-table
+table.table.table-bordered.table-hover.table-stripped
   thead
     tr
       th Name
@@ -18,10 +18,10 @@ table
         td = page.path
         td = page.title
         td = page.html
-        td = link_to 'Show', page
-        td = link_to 'Edit', edit_page_path(page)
-        td = link_to 'Destroy', page, data: {:confirm => 'Are you sure?'}, :method => :delete
+        td = link_to 'Show', page, class: 'btn btn-default'
+        td = link_to 'Edit', edit_page_path(page), class: 'btn btn-warning'
+        td = link_to 'Destroy', page, data: {:confirm => 'Are you sure?'}, :method => :delete, class: 'btn btn-danger'
 
 br
 
-= link_to 'New Page', new_page_path
+= link_to 'New Page', new_page_path, class: 'btn btn-primary'

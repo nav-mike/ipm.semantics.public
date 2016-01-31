@@ -6,16 +6,16 @@
         - @page.errors.full_messages.each do |message|
           li = message
 
-  .field
+  .form-group
     = f.label :name
-    = f.text_field :name
-  .field
+    = f.text_field :name, class: 'form-control'
+  .form-group
     = f.label :path
-    = f.text_field :path
-  .field
+    = f.text_field :path, class: 'form-control'
+  .form-group
     = f.label :title
-    = f.text_field :title
-  .field
+    = f.text_field :title, class: 'form-control'
+  .form-group
     = f.label :html
-    = f.text_area :html
-  .actions = f.submit
+    = f.text_area :html, class: 'form-control', rows: '10'
+  .form-group = f.submit class: 'btn btn-success'

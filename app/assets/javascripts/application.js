@@ -12,4 +12,5 @@
 //
 //= require jquery
 //= require bootstrap-sprockets
+//= require wice_grid
 //= require_tree .

@@ -2,7 +2,9 @@ h1 Editing page
 
 == render 'form'
 
-= link_to 'Show', @page
-'|
-= link_to 'Back', pages_path
+.row
+  .col-sm-1
+    = link_to 'Show', @page, class: 'btn btn-default'
+  .col-sm-11
+    = link_to 'Back', pages_path, class: 'btn btn-warning'
 
