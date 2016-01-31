@@ -27,6 +27,10 @@ module SemanticCmsDemo
     # Config gem
     Bundler.require(*Rails.groups)
 
+    config.to_prepare do
+      Devise::SessionsController.layout "login"
+    end
+
     config.generators do |g|
       g.orm :active_record
       g.test_framework :rspec

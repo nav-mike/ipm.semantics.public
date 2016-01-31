@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :publications
-  resources :people
-  resources :projects
-  resources :pages
-  resources :users
+  scope 'admin' do
+    resources :publications
+    resources :people
+    resources :projects
+    resources :pages
+    resources :users
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
