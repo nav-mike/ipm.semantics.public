@@ -4,7 +4,7 @@ class CreatePeople < ActiveRecord::Migration
       t.string :linkedin, null: true, default: nil
       t.string :google_plus, null: true, default: nil
       t.string :scopus, null: true, default: nil
-      t.string :university, null: false
+      t.string :university, null: false, default: 'itmo'
       t.string :awards
       t.string :impact_story, null: true, default: nil
       t.string :google_scholar, null: true, default: nil
