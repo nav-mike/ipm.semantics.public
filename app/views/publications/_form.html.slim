@@ -3,6 +3,8 @@
 
   .form-inputs
     = f.input :bib
+    = f.association :people
+    = f.association :projects
 
   .form-actions
     = f.button :submit, class: 'btn btn-success'

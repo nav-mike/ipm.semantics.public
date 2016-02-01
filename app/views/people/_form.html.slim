@@ -20,6 +20,8 @@
     = f.input :twitter
     = f.input :photo
     = f.input :fb
+    = f.association :projects
+    = f.association :publications, label_method: :bib
 
   .form-actions
     = f.button :submit
