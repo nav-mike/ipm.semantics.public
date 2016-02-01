@@ -23,7 +23,7 @@ class PublicationsController < ApplicationController
 
     respond_to do |format|
       if @publication.save
-        format.html { redirect_to @publication, notice: 'Publication was successfully created.' }
+        format.html { redirect_to publications_url, notice: 'Publication was successfully created.' }
         format.json { render :show, status: :created, location: @publication }
       else
         format.html { render :new }
@@ -37,7 +37,7 @@ class PublicationsController < ApplicationController
   def update
     respond_to do |format|
       if @publication.update(publication_params)
-        format.html { redirect_to @publication, notice: 'Publication was successfully updated.' }
+        format.html { redirect_to publications_url, notice: 'Publication was successfully updated.' }
         format.json { render :show, status: :ok, location: @publication }
       else
         format.html { render :edit }
