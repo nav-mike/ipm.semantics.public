@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get '/admin' => 'pages#index'
 
   # debug cube
-  get '/admin/cube/project' => 'projecs#cube'
+  get '/admin/cube/project' => 'projects#cube'
   get '/admin/cube/person' => 'people#cube'
   get '/admin/cube/department' => 'application#department'
   get '/admin/cube/search' => 'application#search'

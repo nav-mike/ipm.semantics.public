@@ -2,8 +2,8 @@
 
 .page-header
   h1
-    | #{Faker::Lorem.word.capitalize} #{Faker::Lorem.word}
-    small= " #{Faker::Lorem.sentence}"
+    | Test project
+    small= " Short description"
 
 .panel.panel-default
   .panel-body style='text-align: justify;'
@@ -18,7 +18,7 @@
       i.fa.fa-globe
     span
       strong
-        a.person href="/admin/cube/department" #{Faker::Company.name},
+        a.person href="/admin/cube/department" Test department,
       |  #{2.years.ago.year}
       |  -
       |  #{1.years.from_now.year}
@@ -30,7 +30,7 @@
     h3.panel-title People
   .panel-body
     - 5.times.each do
-      = render 'person_line'
+      = render 'cube/person_line'
 
 .panel.panel-default
   .panel-heading
@@ -40,4 +40,4 @@
   .panel-body
     ul.list-group
       - 11.times.each do
-        = render 'publication_line'
+        = render 'cube/publication_line'

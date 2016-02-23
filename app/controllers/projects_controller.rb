@@ -13,6 +13,7 @@ class ProjectsController < ApplicationController
   end
 
   def cube
+    render 'cube/project'
   end
 
   # GET /projects/1/edit
