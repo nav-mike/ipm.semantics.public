@@ -1,0 +1,19 @@
+.btn-website {
+  color: #fff;
+  background-color: #205081;
+  border-color: rgba(0,0,0,0.2)
+}
+
+.btn-bitbucket:hover,
+.btn-bitbucket:focus,
+.btn-bitbucket:active,
+.btn-bitbucket.active,
+.open>.dropdown-toggle.btn-bitbucket {
+  color: #fff;
+  background-color: #163758;
+  border-color: rgba(0,0,0,0.2)
+}
+
+.btn-social-bootstrap {
+  margin-right: 5px;
+}
