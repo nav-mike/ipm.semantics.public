@@ -10,5 +10,6 @@ class ApplicationController < ActionController::Base
   end
 
   def search
+    render 'cube/search'
   end
 end
