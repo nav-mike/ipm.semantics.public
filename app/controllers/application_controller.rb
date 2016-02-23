@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
 
   def department
+    render 'cube/department'
   end
 
   def search
