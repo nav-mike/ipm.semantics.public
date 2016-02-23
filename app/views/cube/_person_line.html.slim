@@ -1,0 +1,31 @@
+.col-lg-6
+  .well.well-sm
+    .row
+      .col-sm-5.col-md-3
+        img.img-rounded.img-responsive height='85' width='110' alt="" src="#{Faker::Avatar.image}" /
+      .col-sm-7.col-md-9
+        h4
+          a.person href='/admin/cube/person'
+            | #{Faker::Name.name}
+        = "+0 #{Faker::PhoneNumber.cell_phone}"
+        p
+          .btn-group
+            a.btn.btn-social-icon.btn-facebook
+              i.fa.fa-envelope-o
+            a.btn.btn-social-icon.btn-bitbucket
+              i.fa.fa-globe
+        /! Split button
+        p
+          .btn-group
+            a.btn.btn-social-icon.btn-twitter
+              i.fa.fa-twitter
+            a.btn.btn-social-icon.btn-github
+              i.fa.fa-github
+            a.btn.btn-social-icon.btn-google
+              i.fa.fa-google
+            a.btn.btn-social-icon.btn-facebook
+              i.fa.fa-facebook
+            a.btn.btn-social-icon.btn-linkedin
+              i.fa.fa-linkedin
+            a.btn.btn-social-icon.btn-instagram
+              i.fa.fa-instagram

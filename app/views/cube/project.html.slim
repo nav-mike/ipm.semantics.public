@@ -1,0 +1,43 @@
+- title Faker::Lorem.word.capitalize
+
+.page-header
+  h1
+    | #{Faker::Lorem.word.capitalize} #{Faker::Lorem.word}
+    small= " #{Faker::Lorem.sentence}"
+
+.panel.panel-default
+  .panel-body style='text-align: justify;'
+    img.avatar src="#{Faker::Avatar.image}" width='75' height='75'
+    a.btn.btn-social-bootstrap.btn-social-icon.btn-twitter title='twitter'
+      i.fa.fa-twitter
+    a.btn.btn-social-bootstrap.btn-social-icon.btn-github title='github'
+      i.fa.fa-github
+    a.btn.btn-social-bootstrap.btn-social-icon.btn-google title='google plus'
+      i.fa.fa-google
+    a.btn.btn-social-bootstrap.btn-social-icon.btn-website title='project website'
+      i.fa.fa-globe
+    span
+      strong
+        a.person href="/admin/cube/department" #{Faker::Company.name},
+      |  #{2.years.ago.year}
+      |  -
+      |  #{1.years.from_now.year}
+    p.about
+      = Faker::Lorem.paragraph(50)
+
+.panel.panel-default
+  .panel-heading
+    h3.panel-title People
+  .panel-body
+    - 5.times.each do
+      = render 'person_line'
+
+.panel.panel-default
+  .panel-heading
+    h3.panel-title
+      | Publications
+      span.badge style='margin-left: 5px;' 11
+  .panel-body
+    ul.list-group
+      - 11.times.each do
+        = render 'publication_line'

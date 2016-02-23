@@ -1,0 +1,5 @@
+li.list-group-item
+  = "#{Faker::Name.name}, #{Faker::Name.name}, #{Faker::Name.name},
+     #{Faker::Lorem.sentence} In: #{Faker::Lorem.sentence(3).split.map(&:capitalize) * ' '},
+     #{Faker::Date.between(10.years.ago, Time.zone.today).year}"
+  span.badge.badge-publication= " #{[*1..5].sample}"

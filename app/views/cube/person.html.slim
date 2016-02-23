@@ -1,0 +1,57 @@
+- title Faker::Name.name
+
+.page-header
+  h1
+    | #{Faker::Name.name}
+    small
+      a.title href='/admin/cube/department'= " #{Faker::Company.name}"
+
+.panel.panel-default
+  .panel-body style='text-align: justify;'
+    img src="#{Faker::Avatar.image}" style='float: left; margin-right: 20px; margin-bottom: 10px;'
+    p.about
+      = Faker::Lorem.paragraph(5)
+    p
+      a.btn.btn-social-bootstrap.btn-social-icon.btn-twitter title='twitter '
+        i.fa.fa-twitter
+      a.btn.btn-social-bootstrap.btn-social-icon.btn-facebook title='facebook'
+        i.fa.fa-facebook
+      a.btn.btn-social-bootstrap.btn-social-icon.btn-github title='github'
+        i.fa.fa-github
+      a.btn.btn-social-bootstrap.btn-social-icon.btn-google title='google plus'
+        i.fa.fa-google
+      a.btn.btn-social-bootstrap.btn-social-icon.btn-instagram title='instagram'
+        i.fa.fa-instagram
+      a.btn.btn-social-bootstrap.btn-social-icon.btn-linkedin title='linkedin'
+        i.fa.fa-linkedin
+    p
+      a.btn.btn-social-bootstrap.btn-social.btn-facebook
+        i.fa.fa-envelope-o
+        |  #{Faker::Internet.email}
+    p
+      a.btn.btn-social-bootstrap.btn-social.btn-bitbucket
+        i.fa.fa-globe
+        |  #{Faker::Internet.url}
+    p
+      a.btn.btn-social-bootstrap.btn-social.btn-info
+        i.fa.fa-skype
+        |  #{Faker::Internet.user_name}
+
+.panel.panel-default
+  .panel-heading
+    h3.panel-title
+      |  Projects
+  .panel-body
+    ul.list-group
+      - 5.times.each do
+        = render 'project_line'
+
+.panel.panel-default
+  .panel-heading
+    h3.panel-title
+      | Publications
+      span.badge style='margin-left: 5px;' 11
+  .panel-body
+    ul.list-group
+      - 11.times.each do
+        = render 'publication_line'

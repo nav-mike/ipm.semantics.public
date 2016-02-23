@@ -1,0 +1,21 @@
+- title Faker::Lorem.word
+
+.page-header
+  h1
+    | #{Faker::Lorem.word}
+
+.panel.panel-default
+  .panel-heading
+    h3.panel-title People
+  .panel-body
+    - 5.times.each do
+      = render 'person_line'
+
+.panel.panel-default
+  .panel-heading
+    h3.panel-title
+      |  Projects
+  .panel-body
+    ul.list-group
+    - 3.times.each do
+      = render 'project_line'

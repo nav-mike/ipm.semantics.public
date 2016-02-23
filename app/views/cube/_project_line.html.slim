@@ -1,0 +1,11 @@
+.col-lg-6
+  .well.well-sm
+    .row
+      .col-sm-5.col-md-3
+        img.img-rounded.img-responsive height='85' width='110' alt="" src="#{Faker::Avatar.image}" /
+      .col-sm-7.col-md-9
+        h4
+          a.person href='/admin/cube/project'
+            | #{Faker::Lorem.word.capitalize} #{Faker::Lorem.word}
+          p
+            small= Faker::Lorem.paragraph
