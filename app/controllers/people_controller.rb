@@ -11,6 +11,9 @@ class PeopleController < ApplicationController
   def new
     @person = Person.new
   end
+  
+  def cube
+  end
 
   # GET /people/1/edit
   def edit

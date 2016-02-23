@@ -12,6 +12,9 @@ class ProjectsController < ApplicationController
     @project = Project.new
   end
 
+  def cube
+  end
+
   # GET /projects/1/edit
   def edit
   end
