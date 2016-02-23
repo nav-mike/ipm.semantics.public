@@ -4,7 +4,7 @@
   h1
     | #{Faker::Name.name}
     small
-      a.title href='/admin/cube/department'= " #{Faker::Company.name}"
+      a.title href='/admin/cube/department'= " Test department"
 
 .panel.panel-default
   .panel-body style='text-align: justify;'
@@ -44,7 +44,7 @@
   .panel-body
     ul.list-group
       - 5.times.each do
-        = render 'project_line'
+        = render 'cube/project_line'
 
 .panel.panel-default
   .panel-heading
@@ -54,4 +54,4 @@
   .panel-body
     ul.list-group
       - 11.times.each do
-        = render 'publication_line'
+        = render 'cube/publication_line'

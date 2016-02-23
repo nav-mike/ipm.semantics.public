@@ -13,6 +13,7 @@ class PeopleController < ApplicationController
   end
   
   def cube
+    render 'cube/person'
   end
 
   # GET /people/1/edit
